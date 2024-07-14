@@ -2,17 +2,52 @@
 <html>
     <head>
         <title>Product Preview Design Demo </title>
-        <style></style>
+        <style>
+		   #img_main{
+		      display:block;
+			  object-fit:cover;
+		      margin:10px auto;
+			  padding:5px;
+		      height:400px;
+			  width:400px;
+			  border-radius:10px;
+			  box_shadow: 0 0 0 5px 5px black; 
+			  border:1px solid grey;
+			  
+		   }
+		   .img_table{
+		      
+		      display:flex;
+			  object-fit:cover;
+		      border:1px solid black;
+			  padding:5px;
+		      height:80px;
+			  width:80px;
+			  
+			  border-radius:5px;
+			  margin-right:10px;
+			  cursor:pointer;		   
+		   }
+		   .img_container{	   
+		      display:flex;
+	          justify-content:center;
+			  margin:20px;
+		   }
+		   .img_table:hover{
+		        box_shadow: 0 0 0 5px 5px black;  
+		   }
+		</style>
 	  </head>
     <body>
 	   <title>Product Preview Design</title>
-	   <img src="./Images/table1_img.jpg"/>
-	   <div>
-	      <img src="./Images/table1_img.jpg"/>
-		  <img src="./Images/table2_img.jpg"/>
-		  <img src="./Images/table3_img.jpg"/>
-		  <img src="./Images/table4_img.jpg"/>
-		  <img src="./Images/table5_img.jpg"/>
+	   <img src="./Images/table1_img.jpg" id="img_main"/>
+	
+	   <div class="img_container">
+	      <img src="./Images/table1_img.jpg" class="img_table"/>
+		  <img src="./Images/table2_img.jpg" class="img_table"/>
+		  <img src="./Images/table3_img.jpg" class="img_table"/>
+		  <img src="./Images/table4_img.jpg" class="img_table"/>
+		  <img src="./Images/table5_img.jpg" class="img_table"/>
 	   </div>
 	</body>
 </html>
