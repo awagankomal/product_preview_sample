@@ -3,6 +3,9 @@
     <head>
         <title>Product Preview Design Demo </title>
         <style>
+		   h1{
+		     text-align:center;
+		   }
 		   #img_main{
 		      display:block;
 			  object-fit:cover;
@@ -39,15 +42,24 @@
 		</style>
 	  </head>
     <body>
-	   <title>Product Preview Design</title>
+	   <h1>Product Preview Design</h1>
+	   
 	   <img src="./Images/table1_img.jpg" id="img_main"/>
 	
 	   <div class="img_container">
-	      <img src="./Images/table1_img.jpg" class="img_table"/>
-		  <img src="./Images/table2_img.jpg" class="img_table"/>
-		  <img src="./Images/table3_img.jpg" class="img_table"/>
-		  <img src="./Images/table4_img.jpg" class="img_table"/>
-		  <img src="./Images/table5_img.jpg" class="img_table"/>
+	      <img src="./Images/table1_img.jpg" class="img_table" onclick="loadImage('./Images/table1_img.jpg')" />
+		  <img src="./Images/table2_img.jpg" class="img_table" onclick="loadImage('./Images/table2_img.jpg')"/>
+		  <img src="./Images/table3_img.jpg" class="img_table" onclick="loadImage('./Images/table3_img.jpg')"/>
+		  <img src="./Images/table4_img.jpg" class="img_table" onclick="loadImage('./Images/table4_img.jpg')"/>
+		  <img src="./Images/table5_img.jpg" class="img_table" onclick="loadImage('./Images/table5_img.jpg')"/>
 	   </div>
+	   
+	   <script>
+	      function loadImage(imgName){
+		       const imgval = document.getElementById("img_main");
+			   imgval.src=imgName;
+			   
+		  }
+	   </script>
 	</body>
 </html>
